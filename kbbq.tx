@@ -1,0 +1,60 @@
+Program:
+    'Enter restaurant' Block 'Leave restaurant'
+;
+
+Block:
+    stmts*=Statement
+;
+
+Statement:
+    Variable | If | IfElse | Else | Print | While | FoodPlacement | GrillChange
+;
+
+Variable:
+    type=DataType var_name=ID '=' value=/.+/
+;
+
+If:
+    'cook' '(' condition=Expression ')' '{' block=Block '}'
+;
+
+IfElse:
+    'marinate' '(' condition=Expression ')' '{' block=Block '}'
+;
+
+Else:
+    'flip' '{' block=Block '}'
+;
+
+Print:
+    'sizzle' '(' value=Value ')'
+;
+
+While:
+    'serve' '(' condition=Expression ')' '{' block=Block '}'
+;
+
+FoodPlacement:
+    'grill_spot' '(' xVal=NUMBER ',' yVal=NUMBER ')' '=' value=ID
+;
+
+GrillChange:
+    str='grill_change'
+;
+
+DataType:
+    'rare' | 'medium_rare' | 'medium_well' | 'medium'
+;
+
+Expression:
+    STRING
+;
+
+Value:
+    /[^)]+/
+;
+
+Comment:
+  /\/\/.*$/
+;
+
