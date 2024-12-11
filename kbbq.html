@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>KBBQ</title>
+
+        <style>
+            /* Use flexbox to center the content */
+            body {
+                display: flex;
+                flex-direction: column;  /* Align items in a column */
+                align-items: center;     /* Horizontally center */
+                height: 100vh;           /* Full viewport height */
+                margin: 0;               /* Remove default margin */
+            }
+
+            button {
+                font-size: 16px;
+                padding: 10px 20px;
+                background-color: lightblue;
+            }
+
+            hr {
+                border: 1px solid lightgray;
+                width: 80%; /* You can adjust the width of the line */
+                margin: 20px 0; /* Adjust the space around the line */
+            }
+
+            .image-container {
+                display: flex;
+                justify-content: space-between; /* Distribute space evenly */
+                align-items: center; /* Vertically align images */
+                width: 100%; /* Full width of the container */
+                padding: 20px; /* Add space around the images */
+            }
+
+            /* Optional styling for the images */
+            img {
+                width: 30%; /* You can adjust the width as needed */
+                height: auto; /* Keep aspect ratio */
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 style="text-align: center; font-size: 90px;">KBBQ</h1>
+        <p style="text-align: center; font-size: 30px;">A programming language based on Korean Barbeque</p>
+        <button onclick="location.href='https://github.com/LizRey4/KBBQ';" style="font-size: 16px; padding: 10px 20px;">GitHub</button>
+
+        <hr></hr>
+
+        <p style="text-align: center; font-size: 30px;">Some Example Programs</p>
+
+        <div class="image-container">
+            <img src="file:///Users/lizziereynante/Desktop/example1.png" alt="Left Image">
+            <img src="file:///Users/lizziereynante/Desktop/example2.png" alt="Center Image">
+            <img src="file:///Users/lizziereynante/Desktop/example3.png" alt="Right Image">
+        </div>
+
+    </body>
+</html>
